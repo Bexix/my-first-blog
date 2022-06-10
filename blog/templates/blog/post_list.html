@@ -1,22 +1,44 @@
+{% load static %}
 <html>
     <head>
-        <title>Lista de compra</title>
-    </head>
-    <h1><a href="/">Este es el blog de Hugo </a></h1>
-    ><h2><a href="/">En mi blog boy a poner lo que quiera por apartados</a></h2>
-    
-    <body>
-        <div>
-            <h1>Primero el bicho,despues la compra y por ultimo me cago en dios</h1>
+        <div class="page-header">
+            <h1><a href="/">Blog deL Hugo</a></h1>
         </div>
-        
-        {% for post in posts %}
-            <div>
-                <p> publicado: {{ post.published_date }}</p>
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+
+        <h1>Lo primero que encontaremos sera El Bicho pelao, mi lista de la compra y mas cosas</h1>
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="date">
+                                <p>publicado: {{ post.published_date }}</p>
+                            </div>
+                            <h2><a href="">{{ post.title }}</a></h2>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbPJqw_BRMkSN_szDq8fgzxWhtF5g9TI3ofL0nBSUpr1_vkQzwRyDriNQqLjojdoNcSXA&usqp=CAU"> 
+                        </div>
+                        
+                    {% endfor %}
+                </div>
             </div>
-        {% endfor %}
-        
+        </div>
+        <h3>Jhon cena xina</h3>
+        <img src="https://c.tenor.com/2QCPBetBXlIAAAAd/jhon-cena.gif" alt="Stickman" width="900" height="1000"> 
+        <img src="https://c.tenor.com/fhHc84ajo20AAAAd/chinese-tom.gif" alt="Stickman" width="1000" height="1000"> 
+        <h2>Bueno nos tomamos un descanso ?</h2>
+        <img src="https://c.tenor.com/1nwjs8in1DUAAAAd/el-bicho-tomando-jugo-cr7.gif" alt="Stickman" width="900" height="1000"> 
     </body>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% load static %}
+
 </html>
